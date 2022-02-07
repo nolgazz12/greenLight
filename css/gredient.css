@@ -1,0 +1,21 @@
+.slide {
+  background: -webkit-gradient(
+    linear,
+    top left,
+    bottom left,
+    from(rgb(239, 138, 160)),
+    to(rgb(239, 169, 130))
+  );
+  background: -webkit-linear-gradient(rgb(239, 138, 160), rgb(239, 169, 130));
+  background: linear-gradient(rgb(239, 138, 160), rgb(239, 169, 130));
+}
+
+.Login {
+  background: -webkit-linear-gradient(rgb(239, 138, 160), rgb(239, 169, 130));
+  background: linear-gradient(rgb(239, 138, 160), rgb(239, 169, 130));
+}
+
+.Start {
+  background: -webkit-linear-gradient(rgb(255, 255, 255), rgb(230, 241, 207));
+  background: linear-gradient(rgb(255, 255, 255), rgb(245, 255, 159));
+}

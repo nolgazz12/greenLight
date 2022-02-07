@@ -1,0 +1,134 @@
+.section Main {
+  text-align: center;
+  overflow: hidden;
+}
+
+.layer a {
+  text-decoration: none;
+  opacity: 0.2;
+  color: #ff775c;
+  transition: all 3s;
+  transition-property: color;
+  transition-duration: 9s;
+  transition: delay 2s;
+  transition-timing-function: ease-in-out;
+}
+
+a:hover {
+  transition-property: color;
+  font-family: "Do Hyeon", sans-serif;
+  font-weight: bold;
+  color: #4ff586;
+  opacity: 1;
+}
+
+#section0,
+a {
+  font-family: "Do Hyeon", sans-serif;
+  font-weight: bold;
+  color: #ff775c;
+  transition-property: color;
+  transition-property: font-size;
+  transition-duration: 9s;
+  transition: delay 2s;
+  transition-timing-function: ease-in-out;
+}
+
+#section0:hover {
+  transition-property: color;
+  font-family: "Do Hyeon", sans-serif;
+  font-weight: bold;
+  color: #4ff586;
+}
+
+.layer h4 a {
+  border-radius: 4px;
+  background-color: black;
+  border: none;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 1s;
+  cursor: pointer;
+  margin: 5px;
+  opacity: 0.2;
+}
+
+.layer h4 a span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.layer h4 a span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.layer:hover span {
+  padding-right: 25px;
+}
+
+.layer:hover span:after {
+  content: "\00bb";
+  cursor: pointer;
+  opacity: 1;
+  right: 0;
+}
+
+#myVideo {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-size: 100% 100%;
+  background-color: black; /* in case the video doesn't fit the whole page*/
+  background-image: our video;
+  background-position: center center;
+  background-size: contain;
+  object-fit: cover; /*cover video background */
+  z-index: 3;
+}
+
+/* Layer with position absolute in order to have it over the video
+* --------------------------------------- */
+#section0 .layer {
+  position: absolute;
+  z-index: 4;
+  width: 100%;
+  left: 0;
+  top: 43%;
+
+  /*
+    * Preventing flicker on some browsers
+    * See http://stackoverflow.com/a/36671466/1081396  or issue #183
+    */
+  -webkit-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+/*solves problem with overflowing video in Mac with Chrome */
+#section0 {
+  overflow: hidden;
+}
+
+/* Bottom menu
+* --------------------------------------- */
+#infoMenu li a {
+  color: #fff;
+}
+
+/* Hiding video controls
+* See: https://css-tricks.com/custom-controls-in-html5-video-full-screen/
+* --------------------------------------- */
+video::-webkit-media-controls {
+  display: none !important;
+}

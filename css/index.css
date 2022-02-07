@@ -1,0 +1,40 @@
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.s1 {
+  background-color: rgb(250, 200, 242);
+}
+
+.section {
+  text-align: center;
+  font-size: 3em;
+  font-family: "Do Hyeon";
+  color: dimgray;
+}
+
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+  left: 50%;
+  top: 50%;
+}
+
+.fp-controlArrow.fp-prev {
+  left: 35px;
+}
+
+.fp-controlArrow.fp-next {
+  right: 35px;
+}
+
+#fp-slidesNav ul li a {
+  background: rgb(196, 50, 50);
+}
+
+#fp-nav ul li a span {
+  background: #fff;
+}

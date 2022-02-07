@@ -1,0 +1,497 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>Untitled Document</title>
+
+<script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+ 
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+
+
+
+<body>
+    
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+                
+        td , h4{text-align:center;}
+        
+        
+        body {color: darkgoldenrod;
+            font-family: 'Jua', sans-serif;
+        }
+        
+        tbody tr td:first-child {text-align:left;}
+        
+        input[type='radio'] {visibility: hidden;}
+        
+        input[type='radio']:after {width:1.5em;height:1.5em;
+        
+                border-radius: 0.75em;
+        
+                background-color: #fff;
+        
+                content: '';
+        
+                display: inline-block;
+        
+                visibility: visible;
+        
+                border: 2px solid #8d8d8e;}
+        
+        input[type='radio']:checked:after {
+        
+                background-color: #dd99f8;
+        
+                content: '';
+        
+                display: inline-block;
+        
+                visibility: visible;
+        
+                border: 2px solid #e7e7f5;
+        
+         }
+        
+         .btn-primary {
+            color: #fff;
+            background-color: #9966CC;
+            border-color: #9966CC;
+        }
+         .btn-primary:hover {
+            color: #fff;
+            background-color: #FF689F;
+            border-color: #FF689F;
+        }
+        
+        </style>
+    
+<div class="container" >
+
+	<div class="row">
+
+        <div class="col-md-12">
+
+        <h4>연애 타입 자가 진단 테스트</h4>
+
+        <div class="table-responsive">                 
+
+        	<form id="research" class="form-horizontal" >
+
+				<table class="table">
+
+					<thead>
+
+						<tr>
+                            <td> 항목 </td>
+                        
+                            <td>완전히 거절 or 없다</td>
+
+                            <td>고민하다 거절</td>
+
+                            <td>선택할 수 없다</td>
+
+                            <td>긍정적으로 검토</td>
+
+                            <td>무조건 오케이 or 있다</td>        
+
+                        </tr>                   
+
+					</thead>
+
+					<tbody>
+
+						<tr>
+
+                            <td>썸타는 사람이 좀 처럼 고백을 하지 않는 가운데, 다른 사람에게서 고백을 받았다. 나의 선택은?</td>
+
+                            <td><input class="skin" type="radio" name="s1" value="3"/></td>
+
+                            <td><input class="skin" type="radio" name="s1" value="6"/></td>
+
+
+ 
+                            <td><input class="skin" type="radio" name="s1" value="9"/></td>
+
+
+ 
+                            <td><input class="skin" type="radio" name="s1" value="12"/></td>
+
+                            <td><input class="skin" type="radio" name="s1" value="15"/></td>        
+
+                        </tr>
+
+                        <tr>
+
+                            <td>긴 기간동안 알고 지내던 친구에게 고백을 받았다. 나의 선택은?</td>
+
+                            <td><input class="skin" type="radio" name="s2" value="2"/></td>
+
+                            <td><input class="skin" type="radio" name="s2" value="4"/></td>
+
+                            <td><input class="skin" type="radio" name="s2" value="6"/></td>
+
+                            <td><input class="skin" type="radio" name="s2" value="8"/></td>
+
+                            <td><input class="skin" type="radio" name="s2" value="10"/></td>          
+
+                        </tr>
+
+                        <tr>
+
+                            <td>나는 사귀기 전에 손을 잡을 수 있다?</td>
+
+                            <td><input class="skin" type="radio" name="s3" value="2"/></td>
+
+                            <td><input class="skin" type="radio" name="s3" value="4"/></td>
+
+                            <td><input class="skin" type="radio" name="s3" value="6"/></td>
+
+                            <td><input class="skin" type="radio" name="s3" value="8"/></td>
+
+                            <td><input class="skin" type="radio" name="s3" value="10"/></td>    
+
+                        </tr>
+
+                        <tr>
+
+                            <td>나는 친구 이상, 연인 미만의 관계를 선호한다.</td>
+
+                            <td><input class="skin" type="radio" name="s4" value="15"/></td>
+
+                            <td><input class="skin" type="radio" name="s4" value="12"/></td>
+
+                            <td><input class="skin" type="radio" name="s4" value="9"/></td>
+
+                            <td><input class="skin" type="radio" name="s4" value="6"/></td>
+
+                            <td><input class="skin" type="radio" name="s4" value="3"/></td>    
+
+                        </tr>
+
+                        <tr>
+
+                            <td>애인이 20년지기 이성 친구와 부산여행을 간다고 한다. 당신의 선택은?</td>
+
+                            <td><input class="skin" type="radio" name="s5" value="2"/></td>
+
+                            <td><input class="skin" type="radio" name="s5" value="4"/></td>
+
+                            <td><input class="skin" type="radio" name="s5" value="6"/></td>
+
+                            <td><input class="skin" type="radio" name="s5" value="8"/></td>
+
+
+ 
+                            <td><input class="skin" type="radio" name="s5" value="10"/></td> 
+
+                        </tr>
+
+                        <tr>
+
+                            <td>아주 친한 이성 친구에게 애인이 생겼다. 나의 반응은?</td>
+
+                            <td><input class="skin" type="radio" name="s6" value="15"/></td>
+
+                            <td><input class="skin" type="radio" name="s6" value="12"/></td>
+
+                            <td><input class="skin" type="radio" name="s6" value="9"/></td>
+
+                            <td><input class="skin" type="radio" name="s6" value="6"/></td>
+
+                            <td><input class="skin" type="radio" name="s6" value="3"/></td> 
+
+                        </tr>
+
+                        <tr>
+
+                            <td>나는 친구 이상, 연인 미만의 관계에서 더 이상 발전되지 않으면 좋겠다고 생각한 적이 있다?</td>
+
+                            <td><input class="skin" type="radio" name="s7" value="2"/></td>
+
+                            <td><input class="skin" type="radio" name="s7" value="4"/></td>
+
+                            <td><input class="skin" type="radio" name="s7" value="6"/></td>
+
+                            <td><input class="skin" type="radio" name="s7" value="8"/></td>
+
+                            <td><input class="skin" type="radio" name="s7" value="10"/></td> 
+
+                        </tr>
+
+                        <tr>
+
+                            <td>당신은 차이는 편인가? 아니면 차는 편인가?</td>
+
+                            <td><input class="skin" type="radio" name="s8" value="2"/></td>
+
+                            <td><input class="skin" type="radio" name="s8" value="4"/></td>
+
+                            <td><input class="skin" type="radio" name="s8" value="6"/></td>
+
+                            <td><input class="skin" type="radio" name="s8" value="8"/></td>
+
+                            <td><input class="skin" type="radio" name="s8" value="10"/></td> 
+
+                        </tr>
+
+                        <tr>
+
+                            <td>연애해본 적이 있는가?</td>
+
+                            <td><input class="skin" type="radio" name="s9" value="15"/></td>
+
+                            <td><input class="skin" type="radio" name="s9" value="12"/></td>
+
+                            <td><input class="skin" type="radio" name="s9" value="9"/></td>
+
+                            <td><input class="skin" type="radio" name="s9" value="6"/></td>
+
+                            <td><input class="skin" type="radio" name="s9" value="3"/></td> 
+
+                        </tr>
+
+                        <tr>
+
+                            <td>스스로가 잘생겼다고 생각하는가?</td>
+
+                            <td><input class="skin" type="radio" name="s10" value="2"/></td>
+
+                            <td><input class="skin" type="radio" name="s10" value="4"/></td>
+
+
+ 
+                            <td><input class="skin" type="radio" name="s10" value="6"/></td>
+
+                            <td><input class="skin" type="radio" name="s10" value="8"/></td>
+
+                            <td><input class="skin" type="radio" name="s10" value="10"/></td> 
+
+                        </tr>
+
+                        <tr>
+
+                            <td>당신은 좋아하는 사람 앞에서 티가 나나요?</td>
+
+                            <td><input class="skin1" type="radio" name="s11" value="1"/></td>
+
+                            <td><input class="skin1" type="radio" name="s11" value="2"/></td>
+
+                            <td><input class="skin1" type="radio" name="s11" value="3"/></td>
+
+                            <td><input class="skin1" type="radio" name="s11" value="4"/></td>
+
+                            <td><input class="skin1" type="radio" name="s11" value="5"/></td>    
+
+                        </tr>
+
+                        <tr>
+
+                            <td>당신은 연애를 못하는게 아니라 안하는 것인가요?</td>
+
+                            <td><input class="skin1" type="radio" name="s12" value="1"/></td>
+
+                            <td><input class="skin1" type="radio" name="s12" value="2"/></td>
+
+                            <td><input class="skin1" type="radio" name="s12" value="3"/></td>
+
+                            <td><input class="skin1" type="radio" name="s12" value="4"/></td>
+
+                            <td><input class="skin1" type="radio" name="s12" value="5"/></td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>연애를 해보신 적이 있나요?</td>
+
+                            <td><input type="radio" name="s13" value="0"/></td>
+
+                            <td><input type="radio" name="s13" value="0"/></td>
+
+                            <td><input type="radio" name="s13" value="0"/></td>
+
+                            <td><input type="radio" name="s13" value="0"/></td>
+
+                            <td><input type="radio" name="s13" value="1"/></td>
+
+                        </tr>
+
+					</tbody>
+
+				</table>  
+
+			</form>
+
+			<button id="actres" class="btn btn-primary" data-title="결과보기" style="width: 100%;" data-toggle="modal" data-target="#result" >결과보기</button>   
+
+        </div>
+
+    <!-- /.modal-content --> 
+
+  </div>
+
+      <!-- /.modal-dialog --> 
+
+    </div>
+
+    
+
+    
+
+    
+
+<div class="modal fade" id="result" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
+
+      <div class="modal-dialog">
+
+    <div class="modal-content">
+
+          <div class="modal-header">
+
+        <h4 class="modal-title custom_align" id="Heading">당신의 연애 타입은</h4>
+
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>        
+
+      </div>
+
+          <div class="modal-body">
+
+          <div class="form-group">
+
+        총점: <input class="form-control " type="text" name="sum" readonly />
+
+        </div>
+
+        <div class="form-group">
+
+        당신의 타입 : <input class="form-control " type="text" name="skintype" readonly />
+
+        </div>
+
+        <div class="form-group">
+
+        당신과 어울리는 타입 : <textarea rows="4" class="form-control" id="itemtypelist" readonly /></textarea>           
+
+        </div>
+
+      </div>
+
+          <div class="modal-footer ">
+
+        <button type="button" id="signupgo" class="btn btn-primary btn-lg" style="width: 100%;" onClick="self.close();"> 회원가입 하러가기 </button>
+        <!-- <a href="#signupgo" onClick="self.close();"></a> -->
+
+      </div>
+
+        </div>
+
+    <!-- /.modal-content --> 
+
+  </div>
+
+      <!-- /.modal-dialog --> 
+
+    </div>
+
+    
+
+</div>   
+
+
+
+<script>
+
+
+function skinscore(){
+    var score = 0;
+    var score1 = 0;	
+	var isResult = true ;
+	var itemResult = new Array() ;
+	var itemlist = "";
+    $(".skin:checked").each(function(){
+        score+=parseInt($(this).val(),10);
+    });
+    $("input[name=sum]").val(score);
+
+	var skintypeArray = new Array("자유로운 영혼의 소유자", "해바라기 같은 사람", "금사빠");
+	var itemtypeArray = new Array("털털한 타입","도도한 타입","귀여운 타입","어른스러운 타입", "인스타 셀럽", );
+	if(score < 60)  {		
+		$("input[name=skintype]").val(skintypeArray[0]);
+		itemResult[0] = itemtypeArray[0];
+	}
+	else if(score < 70) {
+		$("input[name=skintype]").val(skintypeArray[1]);
+		itemResult[0] = itemtypeArray[1];
+	}
+	else if(score < 80) {
+		$("input[name=skintype]").val(skintypeArray[2]);
+		itemResult[0] = itemtypeArray[2];
+	}
+	else if(score < 90) {
+		$("input[name=skintype]").val(skintypeArray[3]);
+		itemResult[0] = itemtypeArray[3];
+	}
+
+	else {
+
+		itemResult[0] = itemtypeArray[2];
+
+		$("input[name=skintype]").val(skintypeArray[2]);
+
+		if($("input[name=s7]:checked").val() > 7)  {
+
+			itemResult[1] = itemtypeArray[3];
+
+		}
+
+		$(".skin1:checked").each(function(){
+
+	        score1+=parseInt($(this).val(),10);
+
+	    });
+		if(score1 >7) itemResult[2] = itemtypeArray[4];
+		if($("input[name=s13]:checked").val() > 0) {
+			itemResult[3] = itemtypeArray[5];
+		}		
+	}
+	for(k=0;k<itemResult.length;k++){
+		if(itemResult[k]) {		
+			itemlist = itemlist + " 당신에게 제일 잘 어울리는 " + itemResult[k] + " 추천합니다.\n";
+		}
+	}
+
+	$("#itemtypelist").val(itemlist);
+	var rsrchChk = $("#research input[type=radio]");
+	$(':radio').each(function () {
+		name = $(this).attr('name');
+		if (isResult && !$(':radio[name="' + name + '"]:checked').length){ isResult = false;}
+			console.log(isResult);
+		});
+	if(isResult) $("#actres").show();
+}
+$().ready(function(){
+	$("#actres").hide();
+    $("input").change(function(){
+        skinscore()
+    });
+});
+
+</script>
+
+</body>
+
+</html>
